@@ -33,7 +33,7 @@ app.get(
     next();
   },
   (req, res) => {
-    req.send({ time: req.time });
+    res.send({ time: req.time });
   }
 );
 module.exports = app;
