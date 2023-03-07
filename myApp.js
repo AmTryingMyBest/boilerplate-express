@@ -53,4 +53,10 @@ app.get("/name", (req, res) => {
     name: `${firstName} ${lastName}`,
   });
 });
+
+//get data from POST requests
+app.post(PATH, (req, res) => {
+  let string = req.body.first + " " + req.body.last;
+  res.json({ name: string });
+});
 module.exports = app;
